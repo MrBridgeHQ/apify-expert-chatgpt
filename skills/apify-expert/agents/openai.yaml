@@ -1,0 +1,7 @@
+interface:
+  display_name: "Apify Expert"
+  short_description: "Current Apify platform guidance"
+  default_prompt: "Use $apify-expert to check current Apify platform facts before changing this Actor."
+
+policy:
+  allow_implicit_invocation: true
