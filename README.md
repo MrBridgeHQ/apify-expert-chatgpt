@@ -1,4 +1,4 @@
-# apify-expert — ChatGPT / Codex Agent Skill
+# apify-expert - ChatGPT / Codex Agent Skill
 
 An Agent Skill **for ChatGPT (OpenAI Codex)**. **Target LLM: ChatGPT / Codex.**
 

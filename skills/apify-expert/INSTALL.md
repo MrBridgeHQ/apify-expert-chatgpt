@@ -1,6 +1,6 @@
-# Installation — Apify Expert skill (ChatGPT / Codex)
+# Installation - Apify Expert skill (ChatGPT / Codex)
 
-This is a **ChatGPT / Codex skill**: a knowledge hub for Apify platform facts. It has no runtime dependencies — no Python, no packages, no network calls. Installation is just placing the folder where Codex discovers skills.
+This is a **ChatGPT / Codex skill**: a knowledge hub for Apify platform facts. It has no runtime dependencies - no Python, no packages, no network calls. Installation is just placing the folder where Codex discovers skills.
 
 ## Prerequisites
 
@@ -72,7 +72,7 @@ rm -rf ~/.codex/skills/apify-expert
 unzip apify-expert.zip -d ~/.codex/skills/
 ```
 
-If you have hand-edited the `references/*` files (for example, to extend the changelog digest), back them up before replacing — your edits will be overwritten.
+If you have hand-edited the `references/*` files (for example, to extend the changelog digest), back them up before replacing - your edits will be overwritten.
 
 ## Keeping the changelog digest current
 
@@ -90,4 +90,4 @@ Remove-Item -Recurse -Force "$env:USERPROFILE\.codex\skills\apify-expert"
 
 ## Support
 
-This skill is a personal toolkit. To extend it, edit the `references/*.md` files directly — they are the authoritative surface. Verify drift-prone figures (flagged *(verify)*) against <https://docs.apify.com> before treating them as hard limits.
+This skill is a personal toolkit. To extend it, edit the `references/*.md` files directly - they are the authoritative surface. Verify drift-prone figures (flagged *(verify)*) against <https://docs.apify.com> before treating them as hard limits.

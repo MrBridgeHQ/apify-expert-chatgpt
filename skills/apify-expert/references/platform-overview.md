@@ -1,6 +1,6 @@
 # Apify platform overview
 
-Curated baseline of platform mechanics. Updated by hand when a `changelog-digest.md` entry warrants it. Figures flagged *(verify)* should be confirmed against <https://docs.apify.com> before being quoted as hard limits — they drift.
+Curated baseline of platform mechanics. Updated by hand when a `changelog-digest.md` entry warrants it. Figures flagged *(verify)* should be confirmed against <https://docs.apify.com> before being quoted as hard limits - they drift.
 
 ## Actors
 
@@ -29,7 +29,7 @@ All three are accessible via Console, REST API, CLI, and SDK. Each run gets a **
 - **Append-only, tabular** storage for results (rows of JSON). Ideal for scraped items.
 - Per-item size limit **~9 MB** *(verify)*.
 - Export: JSON, JSONL, CSV, Excel, XML, RSS, HTML.
-- **Multiple datasets per Actor** are now supported, each with its own schema + validation (changelog 2026-04-23) — previously one default dataset per run.
+- **Multiple datasets per Actor** are now supported, each with its own schema + validation (changelog 2026-04-23) - previously one default dataset per run.
 
 ### Key-value store (KVS)
 - Stores **records by key**, any content type (JSON, HTML, images, binaries, text).
@@ -46,12 +46,12 @@ All three are accessible via Console, REST API, CLI, and SDK. Each run gets a **
 
 ## Apify Proxy
 
-- **Datacenter** — fastest, cheapest; higher block risk. Billed per IP/usage.
-- **Residential** — home/office IPs, lowest block rate; **billed per GB** (verified). Use sparingly for hard targets.
-- **Google SERP** — for Google SERP extraction, with country/language targeting.
+- **Datacenter** - fastest, cheapest; higher block risk. Billed per IP/usage.
+- **Residential** - home/office IPs, lowest block rate; **billed per GB** (verified). Use sparingly for hard targets.
+- **Google SERP** - for Google SERP extraction, with country/language targeting.
 - **Sessions:** a `session` id pins a sticky IP across requests; rotate by changing the session id. Country targeting via `country` param / proxy group config.
 - Connect via the proxy URL (`http://<groups>,session-<id>,country-<CC>:<password>@proxy.apify.com:8000`) or `Actor.createProxyConfiguration()` in the SDK.
-- Anti-bot strategy (when/which proxy, fingerprinting) is a separate scraping-strategy concern — this is just the platform mechanism.
+- Anti-bot strategy (when/which proxy, fingerprinting) is a separate scraping-strategy concern - this is just the platform mechanism.
 
 ## Schedules
 

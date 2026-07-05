@@ -1,12 +1,12 @@
-# Apify Expert — a ChatGPT / Codex skill
+# Apify Expert - a ChatGPT / Codex skill
 
-A Codex skill that serves as a **platform-knowledge hub for Apify** — Actors, runs, storage (Dataset / Key-value store / Request queue), Apify Proxy, schedules, webhooks, the REST API, the `apify` CLI, the JS/Python SDKs, Standby mode, and Store mechanics — plus a curated digest of recent platform changes so answers stay current.
+A Codex skill that serves as a **platform-knowledge hub for Apify** - Actors, runs, storage (Dataset / Key-value store / Request queue), Apify Proxy, schedules, webhooks, the REST API, the `apify` CLI, the JS/Python SDKs, Standby mode, and Store mechanics - plus a curated digest of recent platform changes so answers stay current.
 
 It is built for the **ChatGPT / Codex skill format**: a `SKILL.md` entry point, an `agents/openai.yaml` interface descriptor, and a set of `references/*.md` baseline files loaded on demand.
 
 ## Why this skill exists
 
-Apify platform facts drift. Default values, template names, storage limits, and Standby behavior all change over time, and notes that hard-code them go stale silently. This skill centralizes a curated baseline of platform mechanics and pairs it with a newest-first changelog digest, so a Codex session can check authoritative facts (and recent changes) **before** building, debugging, publishing, or updating an Actor — instead of answering from a stale memory.
+Apify platform facts drift. Default values, template names, storage limits, and Standby behavior all change over time, and notes that hard-code them go stale silently. This skill centralizes a curated baseline of platform mechanics and pairs it with a newest-first changelog digest, so a Codex session can check authoritative facts (and recent changes) **before** building, debugging, publishing, or updating an Actor - instead of answering from a stale memory.
 
 ## What it covers
 
@@ -42,7 +42,7 @@ apify-expert/
 
 ## Installation
 
-See `INSTALL.md`. This is a knowledge-only skill — no Python, no dependencies, no network calls. You drop the folder into your Codex skills directory and it activates on Apify platform questions.
+See `INSTALL.md`. This is a knowledge-only skill - no Python, no dependencies, no network calls. You drop the folder into your Codex skills directory and it activates on Apify platform questions.
 
 ## How to invoke
 
@@ -72,13 +72,13 @@ This skill provides the platform facts those tasks build on; it does not perform
 
 This skill is part of the [mr-bridge.com](https://mr-bridge.com) toolkit for scraping, data, and content automation. Related resources:
 
-- [mr-bridge.com](https://mr-bridge.com) — home
-- [Scrapers](https://mr-bridge.com/scrapers) — the Apify Actor portfolio
-- [MCP servers](https://mr-bridge.com/mcp-servers) — Model Context Protocol servers
-- [AI workflows](https://mr-bridge.com/ai-workflows) — agents and automation
-- [Studies](https://mr-bridge.com/studies) — data studies and one-pagers
-- [Articles](https://mr-bridge.com/articles) — write-ups and guides
-- [Solutions](https://mr-bridge.com/solutions) — end-to-end solutions
+- [mr-bridge.com](https://mr-bridge.com) - home
+- [Scrapers](https://mr-bridge.com/scrapers) - the Apify Actor portfolio
+- [MCP servers](https://mr-bridge.com/mcp-servers) - Model Context Protocol servers
+- [AI workflows](https://mr-bridge.com/ai-workflows) - agents and automation
+- [Studies](https://mr-bridge.com/studies) - data studies and one-pagers
+- [Articles](https://mr-bridge.com/articles) - write-ups and guides
+- [Solutions](https://mr-bridge.com/solutions) - end-to-end solutions
 
 ## License
 

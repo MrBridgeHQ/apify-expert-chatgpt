@@ -3,7 +3,7 @@ name: apify-expert
 description: Current Apify platform guidance for Actors, runs, storage, Proxy, Standby, Store mechanics, CLI, SDKs, REST API, integrations, and recent platform changes. Use when Codex needs authoritative Apify facts or freshness checks before building, debugging, publishing, or updating an Actor.
 ---
 
-# Apify Expert — platform-knowledge hub
+# Apify Expert - platform-knowledge hub
 
 A single source of truth for **Apify platform facts**. This skill owns *platform mechanics* and keeps a curated changelog digest as a freshness signal when recent platform changes may affect how you build or operate an Actor.
 
@@ -24,7 +24,7 @@ Platform facts drift. Notes that hard-code "Standby idle timeout default is X" o
 | Standby mode platform behavior, Store mechanics, account/limits | `references/platform-features.md` |
 | **Recent platform changes** | `references/changelog-digest.md` |
 
-## Scope — what this skill is NOT for
+## Scope - what this skill is NOT for
 
 This skill gives you the *platform substrate* (e.g. "how Standby billing works", "current storage limits"). It is **not** a substitute for deep domain work. When a question is really about one of the following, treat it as a separate concern and reach for the appropriate specialized tooling or documentation:
 
@@ -45,7 +45,7 @@ Before relying on platform-sensitive facts, inspect `references/changelog-digest
 
 ## Keeping the digest current
 
-`references/changelog-digest.md` is maintained **manually**. To keep it useful, periodically review <https://apify.com/change-log>, add new entries newest-first under the insertion marker, and update the baseline `references/*` files when an entry changes a fact they state. There is no automated updater shipped with this skill — refresh it on whatever cadence suits you.
+`references/changelog-digest.md` is maintained **manually**. To keep it useful, periodically review <https://apify.com/change-log>, add new entries newest-first under the insertion marker, and update the baseline `references/*` files when an entry changes a fact they state. There is no automated updater shipped with this skill - refresh it on whatever cadence suits you.
 
 ## Freshness contract
 

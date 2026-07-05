@@ -1,13 +1,13 @@
 # Apify CLI & SDK
 
-Baseline reference for the `apify` CLI and the JS/Python SDKs. Command surface is stable but templates and flags drift — confirm against <https://docs.apify.com/cli> and <https://docs.apify.com/sdk>.
+Baseline reference for the `apify` CLI and the JS/Python SDKs. Command surface is stable but templates and flags drift - confirm against <https://docs.apify.com/cli> and <https://docs.apify.com/sdk>.
 
-## CLI — installation
+## CLI - installation
 
 - `npm install -g apify-cli` (Node LTS) **or** `brew install apify-cli` (macOS/Linux via Homebrew).
 - Verify: `apify --version`. Authenticate: `apify login` (token from Console → Settings → Integrations).
 
-## CLI — core commands
+## CLI - core commands
 
 | Command | Purpose |
 |---|---|
@@ -25,17 +25,17 @@ Baseline reference for the `apify` CLI and the JS/Python SDKs. Command surface i
 | `apify datasets` / `key-value-stores` / `request-queues` | Manage storages from the CLI |
 | `apify secrets <add\|rm>` | Manage secret env vars referenced from input schema |
 
-> **Push caution:** `apify push` uploads everything not in `.gitignore`/`.dockerignore`, and the public API exposes a published Actor's source files (`versions[0].sourceFiles[]`) to authenticated users even when source is hidden in the Console UI. Keep any non-shippable files (private notes, internal docs, anything not meant for the Store) out of the push entirely — list them in `.gitignore`/`.dockerignore` or store them outside the Actor directory. Verify what was uploaded: `apify actors info <user/slug> --json | jq '.versions[0].sourceFiles[].name'`.
+> **Push caution:** `apify push` uploads everything not in `.gitignore`/`.dockerignore`, and the public API exposes a published Actor's source files (`versions[0].sourceFiles[]`) to authenticated users even when source is hidden in the Console UI. Keep any non-shippable files (private notes, internal docs, anything not meant for the Store) out of the push entirely - list them in `.gitignore`/`.dockerignore` or store them outside the Actor directory. Verify what was uploaded: `apify actors info <user/slug> --json | jq '.versions[0].sourceFiles[].name'`.
 
 ## `apify create` templates (current set)
 
 **TypeScript / Node:**
-- `ts-crawlee-cheerio` — static HTML (HTTP + Cheerio)
-- `ts-crawlee-playwright-chrome` — JS-rendered SPAs, moderate anti-bot
-- `ts-crawlee-puppeteer-chrome` — legacy browser (prefer Playwright)
-- `ts-crawlee-playwright-camoufox` — hard anti-bot targets (Camoufox stealth)
-- `ts-empty` / `ts-start` — custom architecture
-- `ts-mcp-server` — MCP server Actor
+- `ts-crawlee-cheerio` - static HTML (HTTP + Cheerio)
+- `ts-crawlee-playwright-chrome` - JS-rendered SPAs, moderate anti-bot
+- `ts-crawlee-puppeteer-chrome` - legacy browser (prefer Playwright)
+- `ts-crawlee-playwright-camoufox` - hard anti-bot targets (Camoufox stealth)
+- `ts-empty` / `ts-start` - custom architecture
+- `ts-mcp-server` - MCP server Actor
 
 **Python:**
 - `python-crawlee-beautifulsoup`, `python-crawlee-playwright`, `python-crawlee-playwright-camoufox`, `python-empty`, `python-start`
@@ -49,7 +49,7 @@ Template selection rationale (cost/anti-bot trade-offs) is a scraper-architectur
 - **Output:** `await Actor.pushData(item)` (→ default dataset); `await Actor.setValue(key, value)` (→ KVS).
 - **Open storages:** `Actor.openDataset(name?)`, `Actor.openKeyValueStore(name?)`, `Actor.openRequestQueue(name?)`.
 - **Proxy:** `const proxy = await Actor.createProxyConfiguration({ groups, countryCode })`.
-- **Events:** `Actor.on('migrating' | 'aborting' | 'persistState', …)` — persist state for resurrection.
+- **Events:** `Actor.on('migrating' | 'aborting' | 'persistState', …)` - persist state for resurrection.
 - **PPE billing:** `await Actor.charge({ eventName })` (see the Apify monetization docs).
 - **Crawlee** provides `CheerioCrawler`, `PlaywrightCrawler`, `PuppeteerCrawler`, `AdaptivePlaywrightCrawler`, `RequestQueue`, `SessionPool`, `AutoscaledPool`.
 
@@ -58,4 +58,4 @@ Template selection rationale (cost/anti-bot trade-offs) is a scraper-architectur
 - Async-first. `async with Actor: …` or `await Actor.init()` / `await Actor.exit()`.
 - `await Actor.get_input()`, `await Actor.push_data(item)`, `await Actor.set_value(key, value)`.
 - `await Actor.create_proxy_configuration(...)`. Pairs with Crawlee for Python.
-- Python Actors are the minority on Apify (~10% of production scrapers) — default to Node unless there's a strong reason.
+- Python Actors are the minority on Apify (~10% of production scrapers) - default to Node unless there's a strong reason.
